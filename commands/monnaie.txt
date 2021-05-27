@@ -1,0 +1,43 @@
+let baseMonnaie = Math.floor(Math.random() * 5) + 1;
+let ajoutMonnaie = Math.floor(Math.random() * 3) + 1;
+
+if (ajoutMonnaie === baseMonnaie) {
+    monnaie[message.author.id] = {
+        monnaie: monnaie[message.author.id].monnaie + ajoutMonnaie
+    }
+}
+
+fs.writeFile('./monnaie.json', JSON.stringify(monnaie), err => {
+});
+
+
+
+=================================================================================================
+const Discord = require('discord.js');
+const monnaie = require('../monnaie.json');
+
+module.exports.run = async (bot, message, args) => {};
+if (!monnaie[message.author.id]) {
+    monnaie[mesage.author.id] = {
+        monnaie: 0
+    };
+}
+
+let userMonnaie = monnaie[message.author.id].monnaie;
+
+let userMonnaieEmbed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor('#dc143c')
+  .addField('💰', userMonnaie)
+
+
+  message.channel.send(userMonnaieEmbed);
+
+
+module.exports.help = {
+    name: 'monnaie'
+};
+
+===================================================================================================
+
+{}

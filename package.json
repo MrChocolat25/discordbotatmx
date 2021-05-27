@@ -1,0 +1,16 @@
+{
+  "name": "elpadreee",
+  "version": "1.0.0",
+  "description": "elpadreee#8568",
+  "main": "index.js",
+  "scripts": {
+    "start": "node.js"
+  },
+  "author": "elpadreee#8568",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ffmpeg-binaries": "^4.0.0"
+  }
+}
+
